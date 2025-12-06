@@ -17,8 +17,10 @@ The solution uses a unified Next.js architecture to handle the Backend API, Fron
 * **Database:** PostgreSQL (managed by Neon.tech).
 * **ORM:** Prisma (Schema & Type safety).
 * **Security:** `bcrypt` for password hashing and secure credential storage.
+  
+* <img width="1610" height="2015" alt="Untitled diagram-2025-12-06-000407" src="https://github.com/user-attachments/assets/7fd3f787-7aa4-44f2-8ea7-e0289259e62d" />
 
-<img width="1610" height="2015" alt="Architecture Diagram" src= "yahan pr architecture daal dio" />
+
 
 ## 3. Key Features & Trade-offs
 * **Secure Authentication:** Unlike a simple email field, I implemented a full **Login/Signup system**. It verifies the Shopify API Token validity *before* creating an account and stores passwords securely using **bcrypt**.
