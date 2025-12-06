@@ -3,7 +3,8 @@
 ## 1. Project Overview
 This is a multi-tenant Data Ingestion Service that connects to a Shopify store, pulls live data (Orders, Customers), stores it in a PostgreSQL database, and visualizes it on a secure, interactive dashboard.
 
-**Deployed Link:**  "apni link "
+**Deployed Link:** xeno-repo.vercel.app
+
 **Demo Video:**  ""
 
 ## 2. Architecture
