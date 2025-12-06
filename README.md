@@ -33,7 +33,7 @@ To run this locally:
 
 1.  Clone the repo:
     ```bash
-    git clone "apni repo ki link"
+    git clone [(https://github.com/Prkh05/Xeno_Repo)](https://github.com/Prkh05/Xeno_Repo)
     cd xeno-assignment
     ```
 2.  Install dependencies:
@@ -67,6 +67,3 @@ To run this locally:
 1.  **Webhooks:** Replace manual sync with Shopify Webhooks to listen for `orders/create`.
 2.  **Queueing:** Use Redis/BullMQ to handle large data ingestion jobs asynchronously so the API doesn't timeout.
 3.  **OAuth:** Implement official Shopify OAuth 2.0 flow for token generation instead of manual copy-pasting.
-
-
-yeh readme.md h....update kr lio....
