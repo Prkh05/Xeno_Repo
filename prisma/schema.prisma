@@ -1,0 +1,44 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Tenant {
+  id        String     @id @default(uuid())
+  name      String
+  email     String     @unique
+  orders    Order[]
+  customers Customer[]
+}
+
+model Order {
+  id        String   @id @default(uuid())
+  shopifyId String   // No @unique here
+  amount    Float
+  date      DateTime
+  tenantId  String
+  tenant    Tenant   @relation(fields: [tenantId], references: [id])
+}
+
+model Customer {
+  id         String @id @default(uuid())
+  shopifyId  String // No @unique here
+  name       String
+  totalSpent Float
+  tenantId   String
+  tenant     Tenant @relation(fields: [tenantId], references: [id])
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  shopUrl   String
+  accessToken String
+  createdAt DateTime @default(now())
+}
